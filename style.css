@@ -1,0 +1,221 @@
+/*******************************************************
+* 
+* Synergy Solution HTML/CSS?JS Theme / Frontendhero.dev
+* 
+* 01. Reset
+* 02. General elements (body, forms, tables etc)
+* 03. Global styles
+* 04. Utiility classes
+* 05. Grid
+* 
+* 06. Global / Top bar
+* 
+********************************************************/
+
+
+/*******************************************************
+* 01. Reset
+*******************************************************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* { 
+	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/*******************************************************
+* 02. General elemnts
+*******************************************************/
+
+html, body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.6rem;
+    height: 100%;
+    color: #ccc;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+/*******************************************************
+* 03. Global styles
+*******************************************************/
+
+:root {
+    font-size: 62.5%;
+
+    /** 
+    * Colours
+    */
+    --primary-color: #062265;
+    --primary-light: #ecf2fa;
+	--secondary-color: #007bff;
+	
+    --body-text: #757575;
+    --grey: #a0a0a0;
+    --light-grey: #ccc;
+	--lighter-grey: #f1f1f1;
+
+    /**
+    * Border radius
+    */
+    --bor-rad: 5px;
+
+
+}
+
+
+/*******************************************************
+* 04. Utiility classes
+*******************************************************/
+
+
+
+/*******************************************************
+* 05. Grid
+*******************************************************/
+
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+    .gap {
+        gap: 4rem;
+    }
+
+    /** 
+    * Grid spans
+    */
+    .span-2 { grid-column: span 2; }
+    .span-3 { grid-column: span 3; }
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-9 { grid-column: span 9; }
+    .span-10 { grid-column: span 10; }
+    .span-11 { grid-column: span 11; }
+    .span-12 { grid-column: span 12; }
+
+
+/*******************************************************
+* 06. Global / Top bar
+*******************************************************/
+
+#top-bar {
+    background-color: var(--primary-color);
+    background-image: linear-gradient(-45deg, var(--secondary-color) 50%, transparent 50%);
+}
+
+    /** 
+    * Top bar global 
+    */
+    #top-bar a {
+        color: #fff;
+        text-decoration: none;
+        padding: 2rem 1rem 2rem 1rem;
+        display: flex;
+        align-items: center;
+    }
+    #top-bar ul {
+        display: flex;
+    }
+        .ti-icon {
+            margin-right: 0.8rem;
+            font-size: 2rem;
+        }
+
+
+    /** 
+    * Quick contact
+    */
+    .quick-contact {
+        
+    }
+
+
+
+    /** 
+    * Social media
+    */
+    ul.social-media {
+        justify-content: flex-end;
+    }
+    #top-bar ul.social-media a {
+        padding: 2rem 0rem 2rem 0.5rem;
+    }
+
+
+    @media only screen and (max-width: 1000px) {
+
+        .ti-icon {
+            font-size: 2.6rem;
+        }
+        #top-bar ul.quick-contact a {
+            padding: 2rem 1rem 2rem 0;
+        }
+        .quick-contact-li {
+            display: none;
+        }
+        .quick-contact .ti-icon {
+            margin: 0;
+        }
+
+    }
