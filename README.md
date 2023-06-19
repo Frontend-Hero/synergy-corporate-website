@@ -1,0 +1,1 @@
+# synergy-corporate-website
